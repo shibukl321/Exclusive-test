@@ -42,38 +42,44 @@
   </div>
 </div>
 
-<div class="container hero">
-  <h1>어서 와요! 팬 허브 베타</h1>
-  <p>스텔라이브 · 이세계 아이돌을 위한 맞춤 팬 페이지. 로그인하면 즐겨찾기, 투표, 일기 동기화가 됩니다.</p>
-</div>
-<div class="container grid cards-3">
-  <div class="card">
-    <div class="head"><strong>테마</strong></div>
-    <div class="body">
-      <div class="row">
-        <label><input type="radio" name="theme" value="stellive"> 스텔라이브</label>
-        <label><input type="radio" name="theme" value="isegye"> 이세계</label>
-      </div>
-      <p class="small">브라우저에 저장됩니다.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="head"><strong>라이브 위젯</strong></div>
-    <div class="body" id="liveNowBox">
-      <div class="row"><div class="spinner"></div><span class="small">불러오는 중…</span></div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="head"><strong>빠른 링크</strong></div>
-    <div class="body">
-      <div class="row">
-        <a class="btn" href="members.html">멤버 보기</a>
-        <a class="btn" href="gallery.html">팬아트 갤러리</a>
-        <a class="btn" href="vote.html">최애 투표</a>
+<div class="container">
+  <h2>관리자</h2>
+  <div id="adminGate" class="alert err">관리자 계정으로 로그인하세요.</div>
+  <div id="adminArea" class="hidden">
+    <div class="card">
+      <div class="head"><strong>라이브 플래그</strong></div>
+      <div class="body row">
+        <select id="liveMember"></select>
+        <label><input type="checkbox" id="liveOn"/> 방송 중</label>
+        <button id="btnLiveSave" class="btn primary">저장</button>
       </div>
     </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <div class="head"><strong>팬아트 Seed 추가</strong></div>
+      <div class="body row">
+        <select id="seedMember"></select>
+        <input id="seedUrl" placeholder="원본 이미지 URL (pbs.twimg.com 등)"/>
+        <button id="btnSeedAdd" class="btn">추가</button>
+      </div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <div class="head"><strong>팬아트 관리자 고정</strong></div>
+      <div class="body row">
+        <select id="pinMember"></select>
+        <input id="pinUrl" placeholder="오늘 고정 이미지 URL"/>
+        <button id="btnPinSet" class="btn">고정</button>
+      </div>
+    </div>
+    <div style="height:12px"></div>
+    <div class="card">
+      <div class="head"><strong>익명 고백함</strong></div>
+      <div class="body">
+        <div id="confessionList" class="grid cards-3"></div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="footer">© 팬이 만드는 비공식 허브 · 베타</div>
 </body>
 </html>
