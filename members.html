@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
+<link rel="preconnect" href="https://accounts.google.com">
+<title>Stellive × Isegye Fan Hub</title>
+<link rel="stylesheet" href="./styles.css"/>
+<script>
+  window.BACKEND_BASE = "https://stelive-shibuki321.io0907op.workers.dev";
+  window.GOOGLE_AUDIENCE = "396083519795-r5j9hfm32ldtb2gumg2de0njk3ak7j0t.apps.googleusercontent.com";
+</script>
+<script src="./app.js" defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer onload="initGoogle()"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner container">
+    <div class="brand">
+      <div class="logo">☆</div>
+      <div class="title">Stellive × Isegye Fan Hub</div>
+      <span id="liveBadge" class="badge hidden">📡 방송 중</span>
+    </div>
+    <div class="tabs">
+      <a class="tab" href="./index.html">홈</a>
+      <a class="tab" href="./members.html">멤버</a>
+      <a class="tab" href="./gallery.html">팬아트</a>
+      <a class="tab" href="./vote.html">투표</a>
+      <a class="tab" href="./diary.html">일기</a>
+      <a class="tab" href="./admin.html">관리</a>
+    </div>
+    <div class="userbar">
+      <div id="userBox" class="small">로그인 안됨</div>
+      <div id="gsiBtn"></div>
+      <button id="btnLoginFallback" class="btn">Google 로그인</button>
+      <button id="btnLogout" class="btn ghost hidden">로그아웃</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>멤버</h2>
+  <p class="small">즐겨찾기는 계정별로 동기화됩니다.</p>
+  <div id="membersGrid" class="grid cards-3"></div>
+</div>
+</body>
+</html>
