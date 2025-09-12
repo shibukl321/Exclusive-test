@@ -1,0 +1,9 @@
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b1020;color:#e7ecff;margin:0}
+.container{max-width:720px;margin:40px auto;padding:24px;background:#121a35;border:1px solid #22305c;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+h1{margin:.2rem 0 1rem;font-size:1.6rem}h2{margin-top:2rem}
+#googleBtn{margin:12px 0}
+.row{display:flex;gap:8px;margin:8px 0}
+input,button{padding:10px 12px;border-radius:10px;border:1px solid #2a3b74;background:#101a33;color:#e7ecff}
+button{cursor:pointer}button:hover{background:#0f1a44}
+.ok{color:#8cf29a;margin:8px 0}
+ul{padding-left:18px}

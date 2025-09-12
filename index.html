@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fan Hub – Google 로그인 테스트</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    // === 설정: 필요에 따라 A(팝업) 또는 B(리다이렉트) 사용 ===
+    window.FANHUB_CONFIG = {
+      BACKEND_BASE: "https://stelive-shibuki321.io0907op.workers.dev",
+      GOOGLE_CLIENT_ID: "396083519795-r5j9hfm32ldtb2gumg2de0njk3ak7j0t.apps.googleusercontent.com",
+      FLOW: "A" // "A"=popup, "B"=redirect
+    };
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>🔐 Google 로그인 테스트</h1>
+    <p>GitHub Pages ↔ Cloudflare Worker 최소 구현. 문제가 있으면 B(리다이렉트)로 바꿔보세요.</p>
+
+    <div id="googleBtn"></div>
+    <div id="loginResult" class="ok"></div>
+
+    <div class="row">
+      <button id="checkSession">세션 확인</button>
+      <button id="logoutBtn">로그아웃</button>
+    </div>
+
+    <hr />
+    <h2>익명 고백함</h2>
+    <form id="confForm">
+      <input type="text" name="message" placeholder="메시지" required />
+      <button type="submit">등록</button>
+    </form>
+    <ul id="confList"></ul>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
